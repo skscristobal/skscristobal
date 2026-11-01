@@ -1,44 +1,40 @@
-# 👋 Hola, soy [Tu Nombre]
+# Cristóbal Soto Carvajal
 
-Estudiante de **[Tu Carrera]** en **[Tu Universidad]** · [Año/semestre que cursas]
-📍 Santiago, Chile · 🔎 **Buscando práctica profesional** desde [mes/año]
+Estudiante de Ingeniería Civil Informática, Universidad de Valparaíso (8vo semestre).
+Villa Alemana, Región de Valparaíso, Chile.
 
-[Una o dos frases sobre ti: qué te interesa, en qué área te gustaría hacer la práctica y qué te motiva.]
+Mi formación se centra en el desarrollo back end e integración de sistemas (APIs REST y microservicios), bases de datos SQL y NoSQL, redes e infraestructura TI y aseguramiento de calidad de software. He trabajado en proyectos bajo metodología Scrum y me interesan especialmente la digitalización y automatización de procesos, la analítica de datos y la ciberseguridad.
 
----
+Este repositorio reúne los proyectos que he desarrollado durante la carrera.
 
-## 📫 Contacto
+## Contacto
 
-- **Correo:** [tu.correo@ejemplo.com]
-- **LinkedIn:** [linkedin.com/in/tu-usuario]
-- **CV:** [enlace a tu CV en PDF, o súbelo a la carpeta `cv/`]
+- Correo: [c.sotocarvajal1@gmail.com](mailto:c.sotocarvajal1@gmail.com)
+- Currículum: [CV_Cristobal_Soto.pdf](cv/CV_Cristobal_Soto.pdf)
 
----
+## Habilidades técnicas
 
-## 🛠️ Habilidades
-
-| Área | Herramientas |
+| Área | Herramientas y conocimientos |
 |---|---|
-| Lenguajes | [Python, Java, C, SQL...] |
-| Frameworks / librerías | [React, Django, Pandas...] |
-| Herramientas | [Git, Docker, Excel, Figma...] |
-| Idiomas | Español nativo · Inglés [nivel] |
+| Lenguajes | Python, JavaScript, TypeScript, SQL, HTML/CSS |
+| Back end e integración | Node.js, Express, FastAPI, APIs REST, microservicios, Stripe |
+| Bases de datos | MySQL, PostgreSQL (Supabase), MongoDB |
+| Calidad de software | TestLink, Mantis Bug Tracker, Postman, pruebas funcionales y de regresión |
+| Redes e infraestructura | TCP/IP, DNS, DHCP, NAT, Cisco Packet Tracer, Windows y Linux |
+| Herramientas y metodologías | Git, GitHub, Scrum, UML |
+| Idiomas | Español nativo, inglés intermedio |
 
----
+## Proyectos
 
-## 📂 Proyectos
-
-| Proyecto | Descripción | Tecnologías | Ramo / Año |
+| Proyecto | Descripción | Tecnologías | Asignatura |
 |---|---|---|---|
-| [Nombre proyecto 1](proyectos/proyecto-1/) | [Qué hace en una línea] | [Tecnologías] | [Ramo, año] |
-| [Nombre proyecto 2](proyectos/proyecto-2/) | [Qué hace en una línea] | [Tecnologías] | [Ramo, año] |
-| [Nombre proyecto 3](proyectos/proyecto-3/) | [Qué hace en una línea] | [Tecnologías] | [Ramo, año] |
+| TICKET-U: Microservicio de Pagos | Back end del microservicio de pagos de una plataforma de venta de tickets, con integración de la pasarela Stripe. | Node.js, Express, TypeScript, MongoDB, PostgreSQL | Taller de Integración Tecnológica (en curso) |
+| Aseguramiento de Calidad de una Aplicación Web | Planes y casos de prueba funcionales y de regresión, pruebas de API y gestión del ciclo de vida de defectos. | TestLink, Mantis Bug Tracker, Postman | Prueba de Sistemas |
+| Infraestructura de Red para Laboratorio | Diseño de topología para 38 puntos de red, configuración de servicios DNS, DHCP y NAT, y despliegue de un servidor web en Linux. | Cisco Packet Tracer, Linux, TCP/IP | Laboratorio de Redes / Redes de Computadores II |
+| Sistema de Gestión de Almacén | Sistema de control de inventario con registro de entradas y salidas, actualización de stock y reportes operativos. | Python, MySQL | — |
 
-> Pon primero tus mejores proyectos: las empresas suelen mirar solo los 2 o 3 primeros.
+## Formación
 
----
+**Ingeniería Civil Informática**, Universidad de Valparaíso (marzo 2023 – presente)
 
-## 🎓 Formación
-
-- **[Tu Carrera]** — [Tu Universidad] ([año ingreso] – presente)
-- [Cursos, certificaciones o ayudantías relevantes]
+Cursos relevantes: Taller de Integración Tecnológica, Prueba de Sistemas, Bases de Datos I–III, Redes de Computadores I y II, Programación Web, Sistemas Operativos, Arquitectura de Computadores, Metodologías de Análisis y de Diseño.
