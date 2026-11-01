@@ -1,0 +1,1 @@
+Pon aquí tu CV en PDF (ej: CV_TuNombre.pdf) y enlázalo desde el README principal.
