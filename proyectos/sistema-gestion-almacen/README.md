@@ -4,6 +4,10 @@ Proyecto grupal desarrollado para la asignatura ICI324 de Ingeniería Civil Info
 
 Plataforma web full stack para digitalizar la operación de un almacén de barrio: control de inventario y stock, registro de ventas, emisión de facturas, gestión de empleados y proveedores, y generación de reportes.
 
+## Mi participación
+
+Mi rol principal en el equipo fue el desarrollo del backend con FastAPI: la implementación de los endpoints de la API y de la lógica de negocio, y la integración con las bases de datos y los servicios externos. También colaboré en el diseño y la configuración de las bases de datos (SQLite y MongoDB) y en la conexión del frontend con la API.
+
 ## Funcionalidades
 
 **Administrador**
