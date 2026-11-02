@@ -1,0 +1,11 @@
+---
+import OperadorLayout from '../../layouts/OperadorLayout.astro';
+// 1. Importamos el nuevo componente interactivo
+import BienvenidaOperador from '../../components/BienvenidaOperador.jsx';
+---
+
+<OperadorLayout title="Inicio Operador">
+
+  <BienvenidaOperador client:load />
+
+</OperadorLayout>

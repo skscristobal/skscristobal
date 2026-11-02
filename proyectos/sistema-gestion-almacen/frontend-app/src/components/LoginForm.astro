@@ -1,0 +1,99 @@
+---
+let selectedRole = null;
+---
+<style>
+  .role-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .role-button {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    transition: all 0.2s ease;
+  }
+
+  .role-button.selected {
+    background-color: white;
+    color: black;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 300px;
+  }
+
+  input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button.submit-btn {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+
+  button.submit-btn:hover {
+    background-color: #333;
+  }
+</style>
+
+<div>
+  <!-- Botones de rol -->
+  <div class="role-buttons">
+    <button
+      type="button"
+      class={`role-button ${selectedRole === 'operador' ? 'selected' : ''}`}
+      on:click={() => selectedRole = 'operador'}
+    >
+      Operador
+    </button>
+    <button
+      type="button"
+      class={`role-button ${selectedRole === 'admin' ? 'selected' : ''}`}
+      on:click={() => selectedRole = 'admin'}
+    >
+      Administrador
+    </button>
+  </div>
+
+  <!-- Formulario -->
+  <form>
+    <input
+      type="text"
+      name="username"
+      placeholder={`Usuario ${selectedRole ? '(' + selectedRole + ')' : ''}`}
+      disabled={!selectedRole}
+    />
+    <input
+      type="password"
+      name="password"
+      placeholder="Contraseña"
+      disabled={!selectedRole}
+    />
+    <button type="submit" class="submit-btn" disabled={!selectedRole}>
+      Ingresar
+    </button>
+  </form>
+</div>
+
+<script is:inline>
+  // Hacer que Astro reactive el estado (solo frontend)
+  // Nota: Astro 5 permite usar JSX-like con on:click directamente
+</script>

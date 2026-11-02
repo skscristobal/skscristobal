@@ -1,0 +1,24 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import EditarProveedorForm from '@/components/EditarProveedorForm.jsx';
+
+const { id } = Astro.params;
+---
+
+<AdminLayout title={`Editar Proveedor #${id}`}>
+  <section class="w-full max-w-5xl mx-auto p-8">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-3xl font-bold text-white">Editando Proveedor #{id}</h2>
+      <a
+        href="/admin/proveedores"
+        class="px-5 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-800 transition shadow-md"
+      >
+        &larr; Volver a la Lista
+      </a>
+    </div>
+
+    <!-- Se renderiza el formulario interactivo, pasándole el ID como prop -->
+    <EditarProveedorForm id={id} client:load />
+    
+  </section>
+</AdminLayout>

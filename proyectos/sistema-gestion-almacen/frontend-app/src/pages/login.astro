@@ -1,0 +1,16 @@
+---
+import LoginForm from "../components/LoginForm.tsx";
+import "../styles/global.css";
+import AuthLayout from '@/layouts/AuthLayout.astro';
+---
+<AuthLayout title="Login | El Vecino">
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+  </head>
+  <body class="bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600 min-h-screen flex items-center justify-center">
+    <LoginForm client:load />
+  </body>
+</html>
+</AuthLayout>

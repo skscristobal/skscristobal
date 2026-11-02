@@ -1,0 +1,31 @@
+---
+/**
+ * Página: Edición de Empleado
+ * Carga los datos de un empleado específico y renderiza el formulario para editarlo.
+ */
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import EditarOperadorForm from '@/components/EditarOperadorForm.jsx';
+
+// 1. Astro obtiene el ID de la URL (ej: el "5" en "/operadores/5/editar")
+const { id } = Astro.params;
+
+// 2. (Opcional pero recomendado) Aquí harías un fetch al backend para obtener los datos actuales del operador
+// const response = await fetch(`http://127.0.0.1:8000/empleados/${id}`);
+// const operador = await response.json();
+---
+<AdminLayout title="Editar Operador">
+  <section class="w-full max-w-5xl mx-auto p-8">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-3xl font-bold text-white">Editando Operador #{id}</h2>
+      <a
+        href="/admin/operadores"
+        class="px-5 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-800 transition shadow-md"
+      >
+        &larr; Volver a la Lista
+      </a>
+    </div>
+
+    <EditarOperadorForm id={id} client:load />
+
+    </section>
+</AdminLayout>

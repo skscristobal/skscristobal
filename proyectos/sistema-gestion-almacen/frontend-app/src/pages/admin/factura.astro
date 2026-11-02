@@ -1,0 +1,13 @@
+---
+// Tu frontmatter (importaciones, etc.) se mantiene igual
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import FacturasForm from '@/components/FacturasForm.jsx';
+const title = "Gestión de Facturas – Admin";
+---
+<AdminLayout title={title}>
+  <div class="container" style="color: black;">
+    <h1 class="text-3xl font-bold text-white">Gestión de Facturas de Proveedores</h1>
+    <FacturasForm client:load />
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+</AdminLayout>

@@ -31,7 +31,7 @@ Este repositorio reúne los proyectos que he desarrollado durante la carrera.
 | TICKET-U: Microservicio de Pagos | Back end del microservicio de pagos de una plataforma de venta de tickets, con integración de la pasarela Stripe. | Node.js, Express, TypeScript, MongoDB, PostgreSQL | Taller de Integración Tecnológica (en curso) |
 | Aseguramiento de Calidad de una Aplicación Web | Planes y casos de prueba funcionales y de regresión, pruebas de API y gestión del ciclo de vida de defectos. | TestLink, Mantis Bug Tracker, Postman | Prueba de Sistemas |
 | Infraestructura de Red para Laboratorio | Diseño de topología para 38 puntos de red, configuración de servicios DNS, DHCP y NAT, y despliegue de un servidor web en Linux. | Cisco Packet Tracer, Linux, TCP/IP | Laboratorio de Redes / Redes de Computadores II |
-| Sistema de Gestión de Almacén | Sistema de control de inventario con registro de entradas y salidas, actualización de stock y reportes operativos. | Python, MySQL | — |
+| [Sistema de Gestión de Almacén](proyectos/sistema-gestion-almacen/) | Plataforma web full stack para un almacén: inventario y stock, ventas, facturación, gestión de empleados y proveedores, y reportes. | Python, FastAPI, SQLite, MongoDB, Astro, Preact | ICI324 (2025) |
 
 ## Formación
 

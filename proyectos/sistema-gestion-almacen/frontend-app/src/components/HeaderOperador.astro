@@ -1,0 +1,79 @@
+---
+// 1. Solo necesitamos esto para saber en qué pestaña estamos (Ventas/Productos)
+const { pathname } = Astro.url;
+
+// 1. URL por defecto (Fallback) por si falla la conexión
+let logoUrl = "https://elvecino-bucket.s3.amazonaws.com/logo.png"; 
+
+try {
+  // 2. HACEMOS LA PETICIÓN AL BACKEND
+  // Nota: Esto se ejecuta en el servidor (al compilar o en SSR), no en el navegador del cliente.
+  const response = await fetch("https://proyecto-almacen-ici324-backend.onrender.com/obtener-imagen/logo.png");
+
+  if (response.ok) {
+    // 3. RECIBIMOS EL JSON
+    const data = await response.json();
+    
+    // 4. EXTRAEMOS LA URL FIRMADA
+    if (data.url) {
+      logoUrl = data.url; 
+      console.log("✅ Logo cargado desde backend:", data.url.substring(0, 50) + "...");
+    }
+  } else {
+    console.error("❌ El backend respondió error:", response.status);
+  }
+} catch (error) {
+  console.error("❌ Error de conexión (fetch failed):", error.message);
+  // No detenemos la ejecución, simplemente se usará la URL por defecto definida arriba
+}
+---
+
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-black/40 backdrop-blur-md border-b border-white/30 text-white shadow-md">
+  
+  <div class="flex items-center gap-4">
+    <div class="flex items-center gap-2">
+      <img 
+        src={logoUrl} 
+        alt="Logo El Vecino" 
+        class="w-14 h-14 rounded-md shadow-sm object-cover" 
+      />
+    </div>
+  </div>
+
+  <nav class="absolute left-1/2 -translate-x-1/2 flex items-center space-x-4">
+    <a href="/operador" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10 transition">Inicio</a>
+    <a href="/operador/ventas" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10 transition">Ventas</a>
+    <a href="/operador/productos" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10 transition">Productos</a>
+  </nav>
+
+  <div class="flex items-center gap-4">
+    {pathname === '/operador/ventas' && (
+      <button id="carrito-btn" class="flex items-center gap-2 bg-green-600 text-white hover:bg-green-700 px-3 py-1.5 text-sm rounded-md shadow-md transition">
+        <span>Carrito</span>
+      </button>
+    )}
+
+    <a
+      id="logout-btn" 
+      href="/login"
+      class="bg-red-600 hover:bg-red-700 text-white font-medium px-3 py-1.5 text-sm rounded-md shadow-md transition"
+    >
+      Cerrar Sesion
+    </a>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const logoutBtn = document.getElementById("logout-btn");
+    if (logoutBtn && !logoutBtn.dataset.listenerAdded) {
+      logoutBtn.addEventListener("click", (e) => {
+        e.preventDefault(); 
+        localStorage.removeItem("usuario_logueado"); 
+        localStorage.removeItem("carrito"); 
+        window.location.href = '/login'; 
+      });
+      logoutBtn.dataset.listenerAdded = "true";
+    }
+  });
+</script>

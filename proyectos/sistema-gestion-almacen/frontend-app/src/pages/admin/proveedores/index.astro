@@ -1,0 +1,13 @@
+---
+// Se importa el layout y el componente interactivo
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import ProveedoresLista from '@/components/ProveedoresLista.jsx';
+---
+
+<!-- Se utiliza el layout, que ya maneja el espaciado y el padding -->
+<AdminLayout title="Gestión de Proveedores | El Vecino">
+  
+  <!-- El componente se inserta directamente, sin contenedores extra -->
+  <ProveedoresLista client:load />
+
+</AdminLayout>

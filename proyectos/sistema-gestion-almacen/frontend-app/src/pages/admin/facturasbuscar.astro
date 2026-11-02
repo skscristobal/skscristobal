@@ -1,0 +1,64 @@
+---
+// 1. Importa tu layout principal
+import AdminLayout from '@/layouts/AdminLayout.astro';
+// 2. Importa el componente que mostrará la lista de facturas
+import FacturasLista from '@/components/FacturasLista.jsx'; // Asegúrate que la ruta sea correcta
+
+const title = "Buscar Facturas - Admin";
+---
+
+<AdminLayout title={title}>
+
+  <div class="container" style="color: black;"> {/* Usa tus clases de layout */}
+    <h1 class="text-3xl font-bold text-white">Búsqueda de Facturas</h1>
+
+    {/* 3. Renderiza el componente de Preact/React para la lista */}
+    {/* client:load asegura que se ejecute en el navegador */}
+    <FacturasLista client:load />
+
+  </div>
+
+</AdminLayout>
+
+{/* Puedes añadir estilos específicos para esta página aquí si es necesario */}
+<style is:global>
+  /* Si FacturasLista.jsx necesita estilos globales, ponlos aquí */
+  /* Por ejemplo, estilos para la tabla de facturas */
+  .facturas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white; /* Fondo blanco para la tabla */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #333; /* Color de texto oscuro */
+  }
+  .facturas-table th,
+  .facturas-table td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+  }
+  .facturas-table th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+  }
+  .facturas-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  .facturas-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  /* Estilos para botones dentro de la lista, si los hubiera */
+  .facturas-table .action-btn {
+     padding: 5px 10px;
+     margin-right: 5px;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 0.85rem;
+     border: 1px solid transparent;
+  }
+ .facturas-table .btn-view { background-color: #3b82f6; color: white; border-color: #2563eb;}
+ .facturas-table .btn-delete { background-color: #ef4444; color: white; border-color: #dc2626;}
+
+</style>

@@ -1,0 +1,12 @@
+---
+import OperadorLayout from '../../layouts/OperadorLayout.astro';
+import GestionProductos from '../../components/GestionProductos.jsx';
+// import HeaderProductos from '../../components/HeaderProductos.astro'; <-- ELIMINADO
+---
+
+<OperadorLayout>
+  
+  <main class="flex flex-col items-center py-10">
+    <GestionProductos client:load />
+  </main>
+</OperadorLayout>

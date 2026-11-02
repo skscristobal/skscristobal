@@ -1,0 +1,73 @@
+---
+const { operador = {}, modo = "crear" } = Astro.props;
+
+const isEdit = modo === "editar";
+const title = isEdit ? "Guardar Cambios" : "Agregar Operador";
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+
+  const method = isEdit ? "PUT" : "POST";
+  const url = isEdit ? `/api/operadores/${operador.id}` : `/api/operadores`;
+
+  const res = await fetch(url, {
+    method,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+
+  if (res.ok) {
+    alert(isEdit ? "Operador actualizado correctamente" : "Operador creado");
+    window.location.href = "/admin/operadores";
+  } else {
+    alert("Error al guardar el operador");
+  }
+};
+---
+
+<form onSubmit={handleSubmit} class="space-y-4">
+  <div>
+    <label class="block text-gray-700 font-medium">RUT</label>
+    <input
+      type="text"
+      name="rut"
+      value={operador.rut || ""}
+      class="w-full p-2 border border-gray-300 rounded-lg"
+      required
+    />
+  </div>
+
+  <div>
+    <label class="block text-gray-700 font-medium">Nombre</label>
+    <input
+      type="text"
+      name="nombre"
+      value={operador.nombre || ""}
+      class="w-full p-2 border border-gray-300 rounded-lg"
+      required
+    />
+  </div>
+
+  <div>
+    <label class="block text-gray-700 font-medium">Rol</label>
+    <select
+      name="rol"
+      value={operador.rol || ""}
+      class="w-full p-2 border border-gray-300 rounded-lg"
+      required
+    >
+      <option value="">Selecciona un rol</option>
+      <option value="admin">Administrador</option>
+      <option value="operador">Operador</option>
+    </select>
+  </div>
+
+  <button
+    type="submit"
+    class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+  >
+    {title}
+  </button>
+</form>

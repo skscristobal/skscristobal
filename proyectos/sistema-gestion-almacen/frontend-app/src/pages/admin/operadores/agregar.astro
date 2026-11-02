@@ -1,0 +1,21 @@
+---
+import AdminLayout from "@/layouts/AdminLayout.astro";
+import AgregarOperadorForm from "@/components/AgregarOperadorForm.jsx";
+---
+
+<AdminLayout title="Agregar Operador">
+  <section class="w-full max-w-5xl mx-auto p-8">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-3xl font-bold text-white">Agregar Nuevo Operador</h2>
+      <a
+        href="/admin/operadores"
+        class="px-5 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-800 transition shadow-md"
+      >
+        &larr; Volver a la Lista
+      </a>
+    </div>
+
+    <AgregarOperadorForm client:load />
+    
+  </section>
+</AdminLayout>

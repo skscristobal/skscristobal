@@ -1,0 +1,63 @@
+---
+// src/layouts/AdminLayout.astro
+
+// 1. Se importan los componentes y estilos necesarios
+import HeaderAdmin from '@/components/HeaderAdmin.astro';
+import Footer from '@/components/Footer.astro';
+import '@/styles/global.css';
+
+// Se define la propiedad 'title' con un valor por defecto
+const { title = "Admin Panel | El Vecino" } = Astro.props;
+---
+
+{/* 👇 CORREGIDO: Se envuelve todo en un fragmento para solucionar el error de JSX */}
+<>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        
+        {/* Este slot permite a cada página inyectar scripts o links en el <head> */}
+        <slot name="head-scripts" />
+    </head>
+
+    <body class="bg-[url('/fondo-admin.png')] bg-cover bg-center bg-fixed min-h-screen flex flex-col">
+
+        <script is:inline>
+            // Verificación de seguridad en el cliente
+            const usuarioStr = localStorage.getItem("usuario_logueado");
+            if (!usuarioStr) {
+                window.location.href = "/";
+            } else {
+                try {
+                    const usuario = JSON.parse(usuarioStr);
+                    if (usuario.rol !== "administrador") {
+                        window.location.href = "/";
+                    }
+                } catch (e) {
+                    window.location.href = "/";
+                }
+            }
+        </script>
+
+        <!-- La cabecera fija se renderiza primero -->
+        <HeaderAdmin />
+
+        {/* Contenido principal:
+          - flex-1: Ocupa todo el espacio disponible, empujando el footer hacia abajo.
+          - pt-28: Añade el padding superior para que el contenido no quede oculto detrás del header.
+        */}
+        <main class="flex-1 pt-28 px-4 md:px-8">
+            <!-- El contenido específico de cada página se insertará aquí -->
+            <slot />
+        </main>
+
+        <!-- El pie de página se renderiza al final -->
+      
+
+    </body>
+    </html>
+</>
+

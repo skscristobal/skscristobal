@@ -1,0 +1,96 @@
+---
+// src/components/HeaderAdmin.astro
+
+// 1. URL por defecto (Fallback) por si falla la conexión
+let logoUrl = "https://elvecino-bucket.s3.amazonaws.com/logo.png"; 
+
+try {
+  // 2. HACEMOS LA PETICIÓN AL BACKEND
+  // Nota: Esto se ejecuta en el servidor (al compilar o en SSR), no en el navegador del cliente.
+  const response = await fetch("https://proyecto-almacen-ici324-backend.onrender.com/obtener-imagen/logo.png");
+
+  if (response.ok) {
+    // 3. RECIBIMOS EL JSON
+    const data = await response.json();
+    
+    // 4. EXTRAEMOS LA URL FIRMADA
+    if (data.url) {
+      logoUrl = data.url; 
+      console.log("✅ Logo cargado desde backend:", data.url.substring(0, 50) + "...");
+    }
+  } else {
+    console.error("❌ El backend respondió error:", response.status);
+  }
+} catch (error) {
+  console.error("❌ Error de conexión (fetch failed):", error.message);
+  // No detenemos la ejecución, simplemente se usará la URL por defecto definida arriba
+}
+---
+
+<header class="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-white/30 shadow-md">
+  <div class="flex justify-between items-center px-4 md:px-8 py-4">
+    
+    <div class="flex items-center">
+      <a href="/admin" class="hover:opacity-90 transition-opacity">
+        <img 
+          src={logoUrl} 
+          alt="Logo El Vecino" 
+          class="w-12 h-12 md:w-14 md:h-14 rounded-md shadow-sm object-cover" 
+        />
+      </a>
+    </div>
+
+    <nav class="hidden md:block absolute left-1/2 -translate-x-1/2">
+      <div class="flex items-center space-x-6 text-white font-medium">
+        <a href="/admin" class="hover:text-[var(--color-burgundy)] transition-colors">Inicio</a>
+        <a href="/admin/factura" class="hover:text-[var(--color-burgundy)] transition-colors">Facturas</a>
+        <a href="/admin/operadores" class="hover:text-[var(--color-burgundy)] transition-colors">Operadores</a>
+        <a href="/admin/proveedores" class="hover:text-[var(--color-burgundy)] transition-colors">Proveedores</a>
+        <a href="/admin/reportes" class="hover:text-[var(--color-burgundy)] transition-colors">Reportes</a>
+      </div>
+    </nav>
+
+    <div class="hidden md:block">
+      <a
+        href="/login"
+        class="px-5 py-2 border border-[var(--color-burgundy)] text-[var(--color-burgundy)] font-semibold rounded-md text-sm hover:bg-[var(--color-burgundy)] hover:text-black transition-colors duration-300"
+      >
+        Cerrar Sesión
+      </a>
+    </div>
+
+    <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl absolute top-full left-0 w-full border-b border-white/30 shadow-2xl">
+    <nav class="flex flex-col p-6 space-y-4 text-center">
+      <a href="/admin" class="text-white text-lg hover:text-[var(--color-burgundy)] transition-colors">Inicio</a>
+      <a href="/admin/factura" class="text-white text-lg hover:text-[var(--color-burgundy)] transition-colors">Facturas</a>
+      <a href="/admin/operadores" class="text-white text-lg hover:text-[var(--color-burgundy)] transition-colors">Operadores</a>
+      <a href="/admin/proveedores" class="text-white text-lg hover:text-[var(--color-burgundy)] transition-colors">Proveedores</a>
+      <a href="/admin/reportes" class="text-white text-lg hover:text-[var(--color-burgundy)] transition-colors">Reportes</a>
+      <hr class="border-white/20 my-2" />
+      <a
+        href="/login"
+        class="inline-block px-5 py-2 border border-[var(--color-burgundy)] text-[var(--color-burgundy)] font-semibold rounded-md text-sm hover:bg-[var(--color-burgundy)] hover:text-black transition-colors duration-300"
+      >
+        Cerrar Sesión
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>

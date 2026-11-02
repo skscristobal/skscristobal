@@ -1,0 +1,100 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+
+// 1. Se actualiza la interface para incluir rut_proveedor
+interface Proveedor {
+  id_proveedor: number;
+  id_empleado: number;
+  nombre_empresa: string;
+  correo: string;
+  telefono: string;
+  direccion: string;
+  rut_proveedor: string; // <-- AÑADIDO
+}
+
+// 2. Se obtiene el ID de la URL
+const { id } = Astro.params;
+
+const API_URL = import.meta.env.PUBLIC_VITE_API_URL || 'http://127.0.0.1:8000';
+
+// 3. Se buscan los datos del proveedor (ya no se busca al empleado)
+let proveedor: Proveedor | null = null;
+let error = null;
+
+try {
+  const res = await fetch(`${API_URL}/proveedores/${id}`);
+  if (!res.ok) {
+    throw new Error(`Proveedor no encontrado (ID: ${id})`);
+  }
+  proveedor = await res.json() as Proveedor;
+} catch (e) {
+  console.error(e);
+  // --- CORRECCIÓN ---
+  // Verifica si 'e' es un objeto Error
+  if (e instanceof Error) {
+    error = e.message;
+  } else {
+    // Si no lo es, convierte 'e' a un string
+    error = String(e);
+  }
+  // --- FIN CORRECCIÓN ---
+}
+---
+
+<AdminLayout title={proveedor ? `Detalles de ${proveedor.nombre_empresa}` : "Detalles del Proveedor"}>
+  <section class="w-full max-w-3xl mx-auto p-8">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-3xl font-bold text-white">Detalles del Proveedor</h2>
+      <a
+        href="/admin/proveedores"
+        class="px-5 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-800 transition shadow-md"
+      >
+        &larr; Volver a la Lista
+      </a>
+    </div>
+
+    {error && (
+      <div class="bg-red-200 text-red-800 p-4 rounded-lg shadow-md">
+        <strong>Error:</strong> {error}
+      </div>
+    )}
+
+    {proveedor && (
+      <div class="bg-white/80 rounded-xl p-8 shadow-lg">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+          <img src="/default-provider.png" alt={proveedor.nombre_empresa} class="w-32 h-32 object-cover rounded-full border-4 border-white shadow-md" />
+          <div class="w-full">
+            <h3 class="text-3xl font-bold text-gray-900 text-center md:text-left">{proveedor.nombre_empresa}</h3>
+            
+            <div class="mt-6 border-t border-gray-300 pt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+              <div>
+                <strong class="block text-gray-500">ID Proveedor</strong>
+                <span class="text-gray-800">{proveedor.id_proveedor}</span>
+              </div>
+              
+              {/* --- CAMBIO AQUÍ --- */}
+              <div>
+                <strong class="block text-gray-500">RUT Proveedor</strong>
+                <span class="text-gray-800">{proveedor.rut_proveedor || 'No definido'}</span>
+              </div>
+              {/* --- FIN DEL CAMBIO --- */}
+
+              <div>
+                <strong class="block text-gray-500">Teléfono</strong>
+                <span class="text-gray-800">{proveedor.telefono}</span>
+              </div>
+              <div>
+                <strong class="block text-gray-500">Correo Electrónico</strong>
+                <span class="text-gray-800">{proveedor.correo}</span>
+              </div>
+              <div class="sm:col-span-2">
+                <strong class="block text-gray-500">Dirección</strong>
+                <span class="text-gray-800">{proveedor.direccion}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+  </section>
+</AdminLayout>

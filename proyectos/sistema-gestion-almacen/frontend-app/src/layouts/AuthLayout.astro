@@ -1,0 +1,22 @@
+---
+// src/layouts/LoginLayout.astro
+import '@/styles/global.css';
+
+// Se define la propiedad 'title' con un valor por defecto
+const { title = "Login | El Vecino" } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+</head>
+
+<body class="bg-[url('/fondo-login.png')] bg-cover bg-center bg-fixed min-h-screen flex items-center justify-center">
+
+    {/* El contenido específico de la página (el formulario) se insertará aquí */}
+    <slot />
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+---
+// 1. Se importa el layout principal
+import AdminLayout from '@/layouts/AdminLayout.astro';
+// 2. Se importa el componente interactivo (ahora modificado)
+import ReportesManager from '@/components/ReportesManager.jsx';
+---
+
+<AdminLayout title="Reporte de Ventas por Día | El Vecino">
+  
+  <div class="flex flex-col items-center pt-28 p-8 gap-10">
+    <h1 class="text-5xl font-extrabold text-white drop-shadow-lg">
+      Reporte de Ventas por Día
+    </h1>
+
+    <ReportesManager client:load />
+  </div>
+
+</AdminLayout>

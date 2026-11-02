@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pymongo
+python-multipart
+boto3
+python-dotenv
+fastapi-mail
+passlib[bcrypt]
+python-jose[cryptography]
+pydantic
+pydantic-settings
+aiofiles
+fpdf
+cloudinary
+requests

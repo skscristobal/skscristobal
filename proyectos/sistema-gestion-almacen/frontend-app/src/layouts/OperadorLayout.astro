@@ -1,0 +1,54 @@
+---
+import HeaderOperador from '../components/HeaderOperador.astro';
+import AccesibilidadMenu from '../components/accesibilidadMenu.jsx';
+import '@/styles/global.css';
+
+// 👇 1. CAMBIO: Importamos 'ClientRouter' en lugar de 'ViewTransitions'
+import { ClientRouter } from 'astro:transitions';
+
+const { title = "Operador | El Vecino" } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    
+    {/* 👇 2. CAMBIO: Usamos el componente aquí */}
+    <ClientRouter />
+
+    <slot name="head-scripts" />
+</head>
+
+<body 
+  class="min-h-screen flex flex-col transition-all duration-300" 
+  style="background-image: url('/azul.jpg'); background-size: cover; background-position: center; background-attachment: fixed;"
+>
+  
+  <script is:inline>
+      const usuarioStr = localStorage.getItem("usuario_logueado");
+      if (!usuarioStr) {
+          window.location.href = "/";
+      } else {
+          try {
+              const usuario = JSON.parse(usuarioStr);
+              if (usuario.rol !== "cajero") {
+                  window.location.href = "/";
+              }
+          } catch (e) {
+              window.location.href = "/";
+          }
+      }
+  </script>
+
+  <HeaderOperador />
+  
+  <main class="flex-1 pt-28">
+    <slot /> 
+  </main>
+
+  <AccesibilidadMenu client:load />
+
+</body>
+</html>

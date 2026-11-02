@@ -1,0 +1,15 @@
+---
+import OperadorLayout from '../../layouts/OperadorLayout.astro';
+import GestionVentas from '../../components/GestionVentas.jsx';
+// import HeaderVentas from '../../components/HeaderVentas.astro'; <-- ELIMINADO
+---
+
+<OperadorLayout>
+  
+  <main class="flex flex-col items-center py-10">
+    <GestionVentas client:load />
+  </main>
+
+  <script slot="head-scripts" src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+
+</OperadorLayout>
