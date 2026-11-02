@@ -1,0 +1,532 @@
+{
+  "actors": [
+    {
+      "id": "cafeb94d-3842-466e-989c-ab923795cf86",
+      "text": "Paciente Diabetico",
+      "type": "istar.Actor",
+      "x": 75,
+      "y": 31,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": [
+        {
+          "id": "dfe19890-91db-4b7a-9d80-1a5c3619fe9d",
+          "text": "Gestionar su plan de comidas y medicamentos",
+          "type": "istar.Goal",
+          "x": 175,
+          "y": 43,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "b7b7f4c9-1e85-44f5-bff2-45dfa29fc155",
+          "text": "Controlar sus niveles de azúcar",
+          "type": "istar.Goal",
+          "x": 82,
+          "y": 120,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "20acc2a0-96cb-48eb-a4f9-a3c4564bcb2d",
+          "text": "Llevar registro de su salud y evolución.",
+          "type": "istar.Goal",
+          "x": 249,
+          "y": 124,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "5525fb8c-0056-40f2-b825-026b56044bf2",
+          "text": "Registrar lectura en la app",
+          "type": "istar.Task",
+          "x": 81,
+          "y": 197,
+          "customProperties": {
+            "Description": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "55272eba-0047-4cc2-8d6e-8191ea90bc2a",
+      "text": "Administrador",
+      "type": "istar.Role",
+      "x": 853,
+      "y": 671,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": [
+        {
+          "id": "e4a09afa-2911-47a2-8d7a-c063fe040617",
+          "text": "Mantener la seguridad del sistema",
+          "type": "istar.Goal",
+          "x": 875,
+          "y": 795,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "8296c027-7d33-4d75-9531-0bff4d05ee94",
+          "text": "Supervisar el rendimiento de la plataforma",
+          "type": "istar.Goal",
+          "x": 1005,
+          "y": 791,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "ed810315-a004-4d5f-a5eb-b8350cc08f94",
+          "text": "Gestionar usuarios y accesos",
+          "type": "istar.Goal",
+          "x": 978,
+          "y": 741,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "fb4b3bd8-1aa3-428a-b3b8-84f9a66a2db5",
+          "text": "Supervisar accesos y usuarios",
+          "type": "istar.Task",
+          "x": 976,
+          "y": 680,
+          "customProperties": {
+            "Description": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "fb41a746-eded-4007-81b3-ae204c1f9cf8",
+      "text": "Doctor",
+      "type": "istar.Agent",
+      "x": 826,
+      "y": 34,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": [
+        {
+          "id": "43dd37ce-722c-47c9-8531-809f53c297a5",
+          "text": "Ajustar tratamientos médicos",
+          "type": "istar.Goal",
+          "x": 932,
+          "y": 53,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "e08997cd-34c2-483a-bc8f-f4df6d082300",
+          "text": "Supervisar el estado de salud de sus pacientes",
+          "type": "istar.Goal",
+          "x": 954,
+          "y": 120,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "5e18e07e-7adf-4fca-9d27-044d75e1655d",
+          "text": "Emitir reportes o diagnósticos",
+          "type": "istar.Goal",
+          "x": 826,
+          "y": 133,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "33d40a1b-fd0d-4759-8afe-03cddb6ec8a0",
+          "text": "Revisar reportes médicos",
+          "type": "istar.Task",
+          "x": 950,
+          "y": 211,
+          "customProperties": {
+            "Description": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "8c27a850-f59c-4f00-bd30-18ea0f32ed74",
+      "text": "Cuidador/Familiar",
+      "type": "istar.Actor",
+      "x": 27,
+      "y": 668,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": [
+        {
+          "id": "6849dd34-213a-4f50-a2aa-bc0d077fdee6",
+          "text": "Monitorear el estado del paciente",
+          "type": "istar.Goal",
+          "x": 97,
+          "y": 758,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "ea70e696-3a2a-49ef-8793-2dcd24da8a78",
+          "text": "Recibir alertas y notificaciones críticas",
+          "type": "istar.Goal",
+          "x": 27,
+          "y": 808,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "87c44e9b-0057-4376-952f-6a61328722ce",
+          "text": "Apoyar la adherencia al tratamiento",
+          "type": "istar.Goal",
+          "x": 176,
+          "y": 808,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "ff501408-03a1-4dcc-a327-ae1a204fa0fa",
+          "text": "Revisar alertas o notificaciones críticas",
+          "type": "istar.Task",
+          "x": 87,
+          "y": 685,
+          "customProperties": {
+            "Description": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "27ad4374-d823-4721-8f5b-c09dea1561a2",
+      "text": "APP Diabecare",
+      "type": "istar.Actor",
+      "x": 345,
+      "y": 322,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": [
+        {
+          "id": "cbc45082-0d38-45ce-b3b9-ce104d999b6d",
+          "text": "Gestiona el registro de datos de salud, el seguimiento de pacientes, la generación de informes y el envío de alertas. Facilita la interacción entre pacientes, cuidadores y doctores",
+          "type": "istar.Goal",
+          "x": 480,
+          "y": 387,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "a8961163-3a27-4755-8985-540e59fa23fc",
+          "text": "Emitir alertas automáticas al cuidador",
+          "type": "istar.Task",
+          "x": 358,
+          "y": 538,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "818769ad-e60a-49c7-9c14-f7c538bd403e",
+          "text": "Generar reportes automáticos del historial médico",
+          "type": "istar.Task",
+          "x": 658,
+          "y": 399,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "b38ac71a-91ed-4866-9f9d-79ae4691b1b9",
+          "text": "Gestionar usuarios y registrar actividad del sistema",
+          "type": "istar.Task",
+          "x": 650,
+          "y": 546,
+          "customProperties": {
+            "Description": ""
+          }
+        },
+        {
+          "id": "5f5fa2df-1189-4751-a538-4765c65b555e",
+          "text": "Guardar registro de glucosa y generar alerta si el valor es anormal",
+          "type": "istar.Task",
+          "x": 345,
+          "y": 407,
+          "customProperties": {
+            "Description": ""
+          }
+        }
+      ]
+    }
+  ],
+  "orphans": [],
+  "dependencies": [
+    {
+      "id": "6b453554-57da-4af2-99f1-1071d86af08f",
+      "text": "Guardar y analizar la lectura de glucosa",
+      "type": "istar.Goal",
+      "x": 83,
+      "y": 411,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "5525fb8c-0056-40f2-b825-026b56044bf2",
+      "target": "5f5fa2df-1189-4751-a538-4765c65b555e"
+    },
+    {
+      "id": "1edb2e1e-d9ec-4d2d-b15b-95ce0324cfc9",
+      "text": "Generar los reportes con los datos del paciente",
+      "type": "istar.Goal",
+      "x": 952,
+      "y": 402,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "33d40a1b-fd0d-4759-8afe-03cddb6ec8a0",
+      "target": "818769ad-e60a-49c7-9c14-f7c538bd403e"
+    },
+    {
+      "id": "65ecfefb-bdc2-4e65-b0d0-8aa0944d9ed3",
+      "text": "Enviar alertas y notificaciones cuando haya cambios importantes",
+      "type": "istar.Goal",
+      "x": 90,
+      "y": 523,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "ff501408-03a1-4dcc-a327-ae1a204fa0fa",
+      "target": "a8961163-3a27-4755-8985-540e59fa23fc"
+    },
+    {
+      "id": "8d61a41b-a7f6-40a7-82de-c1172f07d2aa",
+      "text": "Permitir gestión de roles y permisos",
+      "type": "istar.Goal",
+      "x": 975,
+      "y": 548,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "fb4b3bd8-1aa3-428a-b3b8-84f9a66a2db5",
+      "target": "b38ac71a-91ed-4866-9f9d-79ae4691b1b9"
+    }
+  ],
+  "links": [
+    {
+      "id": "5118ac68-ff79-45ad-bf3a-afeaad2ed4b5",
+      "type": "istar.DependencyLink",
+      "source": "8d61a41b-a7f6-40a7-82de-c1172f07d2aa",
+      "target": "b38ac71a-91ed-4866-9f9d-79ae4691b1b9"
+    },
+    {
+      "id": "c28f51c4-e2a2-4786-815a-ded80ffc5799",
+      "type": "istar.DependencyLink",
+      "source": "fb4b3bd8-1aa3-428a-b3b8-84f9a66a2db5",
+      "target": "8d61a41b-a7f6-40a7-82de-c1172f07d2aa"
+    },
+    {
+      "id": "6760c54b-2afc-4194-a380-957e4be88796",
+      "type": "istar.DependencyLink",
+      "source": "65ecfefb-bdc2-4e65-b0d0-8aa0944d9ed3",
+      "target": "a8961163-3a27-4755-8985-540e59fa23fc"
+    },
+    {
+      "id": "18787a0a-4103-4f2f-9bc0-aa700b134f14",
+      "type": "istar.DependencyLink",
+      "source": "ff501408-03a1-4dcc-a327-ae1a204fa0fa",
+      "target": "65ecfefb-bdc2-4e65-b0d0-8aa0944d9ed3"
+    },
+    {
+      "id": "336e17c0-690b-46ce-989d-09cdaa9066bc",
+      "type": "istar.DependencyLink",
+      "source": "1edb2e1e-d9ec-4d2d-b15b-95ce0324cfc9",
+      "target": "818769ad-e60a-49c7-9c14-f7c538bd403e"
+    },
+    {
+      "id": "7103a39a-2256-4e2e-aba0-a8010a10ceae",
+      "type": "istar.DependencyLink",
+      "source": "33d40a1b-fd0d-4759-8afe-03cddb6ec8a0",
+      "target": "1edb2e1e-d9ec-4d2d-b15b-95ce0324cfc9"
+    },
+    {
+      "id": "fb9ee3c6-c296-4c81-9b1e-85e177a7bd1f",
+      "type": "istar.DependencyLink",
+      "source": "6b453554-57da-4af2-99f1-1071d86af08f",
+      "target": "5f5fa2df-1189-4751-a538-4765c65b555e"
+    },
+    {
+      "id": "1a9bdb8b-ad6e-491e-aa66-eaa770d836de",
+      "type": "istar.DependencyLink",
+      "source": "5525fb8c-0056-40f2-b825-026b56044bf2",
+      "target": "6b453554-57da-4af2-99f1-1071d86af08f"
+    },
+    {
+      "id": "a899707a-10db-4986-bae1-433366246aaf",
+      "type": "istar.AndRefinementLink",
+      "source": "5525fb8c-0056-40f2-b825-026b56044bf2",
+      "target": "b7b7f4c9-1e85-44f5-bff2-45dfa29fc155"
+    },
+    {
+      "id": "9ae7a6c7-faa0-4a25-a6ed-93f3cbfc59b0",
+      "type": "istar.AndRefinementLink",
+      "source": "33d40a1b-fd0d-4759-8afe-03cddb6ec8a0",
+      "target": "e08997cd-34c2-483a-bc8f-f4df6d082300"
+    },
+    {
+      "id": "e817910a-dc57-4592-8da6-c8d80335dec0",
+      "type": "istar.AndRefinementLink",
+      "source": "ff501408-03a1-4dcc-a327-ae1a204fa0fa",
+      "target": "6849dd34-213a-4f50-a2aa-bc0d077fdee6"
+    },
+    {
+      "id": "4a519ee7-13ba-4eba-8e7a-46eb106b417f",
+      "type": "istar.AndRefinementLink",
+      "source": "cbc45082-0d38-45ce-b3b9-ce104d999b6d",
+      "target": "5f5fa2df-1189-4751-a538-4765c65b555e"
+    },
+    {
+      "id": "e7788a36-79b3-4150-a4b0-f50246a46611",
+      "type": "istar.AndRefinementLink",
+      "source": "cbc45082-0d38-45ce-b3b9-ce104d999b6d",
+      "target": "818769ad-e60a-49c7-9c14-f7c538bd403e"
+    },
+    {
+      "id": "415072ce-1102-45e8-a713-86219150ab4c",
+      "type": "istar.AndRefinementLink",
+      "source": "cbc45082-0d38-45ce-b3b9-ce104d999b6d",
+      "target": "a8961163-3a27-4755-8985-540e59fa23fc"
+    },
+    {
+      "id": "86577515-be0d-437c-a540-8fd298221ae4",
+      "type": "istar.AndRefinementLink",
+      "source": "cbc45082-0d38-45ce-b3b9-ce104d999b6d",
+      "target": "b38ac71a-91ed-4866-9f9d-79ae4691b1b9"
+    },
+    {
+      "id": "112cdc04-b311-4518-980c-a4dd2e313f57",
+      "type": "istar.AndRefinementLink",
+      "source": "fb4b3bd8-1aa3-428a-b3b8-84f9a66a2db5",
+      "target": "ed810315-a004-4d5f-a5eb-b8350cc08f94"
+    }
+  ],
+  "display": {
+    "dfe19890-91db-4b7a-9d80-1a5c3619fe9d": {
+      "width": 98.5625,
+      "height": 51.34375
+    },
+    "b7b7f4c9-1e85-44f5-bff2-45dfa29fc155": {
+      "width": 104.5625,
+      "height": 44.34375
+    },
+    "20acc2a0-96cb-48eb-a4f9-a3c4564bcb2d": {
+      "width": 107.5625,
+      "height": 53.34375
+    },
+    "5525fb8c-0056-40f2-b825-026b56044bf2": {
+      "width": 107.875,
+      "height": 42.34375
+    },
+    "55272eba-0047-4cc2-8d6e-8191ea90bc2a": {
+      "backgroundColor": "#A6201B"
+    },
+    "8296c027-7d33-4d75-9531-0bff4d05ee94": {
+      "width": 97.875,
+      "height": 49.34375
+    },
+    "fb4b3bd8-1aa3-428a-b3b8-84f9a66a2db5": {
+      "width": 96.875,
+      "height": 41.34375
+    },
+    "fb41a746-eded-4007-81b3-ae204c1f9cf8": {
+      "backgroundColor": "#F0D235"
+    },
+    "e08997cd-34c2-483a-bc8f-f4df6d082300": {
+      "width": 99.875,
+      "height": 54.34375
+    },
+    "5e18e07e-7adf-4fca-9d27-044d75e1655d": {
+      "width": 91.875,
+      "height": 42.34375
+    },
+    "33d40a1b-fd0d-4759-8afe-03cddb6ec8a0": {
+      "width": 102.875,
+      "height": 41.34375
+    },
+    "8c27a850-f59c-4f00-bd30-18ea0f32ed74": {
+      "backgroundColor": "#DB8935"
+    },
+    "6849dd34-213a-4f50-a2aa-bc0d077fdee6": {
+      "width": 91.5625,
+      "height": 37.84375
+    },
+    "ea70e696-3a2a-49ef-8793-2dcd24da8a78": {
+      "width": 102.5625,
+      "height": 48.34375
+    },
+    "ff501408-03a1-4dcc-a327-ae1a204fa0fa": {
+      "width": 110.875,
+      "height": 55.34375
+    },
+    "27ad4374-d823-4721-8f5b-c09dea1561a2": {
+      "backgroundColor": "#997FB0"
+    },
+    "cbc45082-0d38-45ce-b3b9-ce104d999b6d": {
+      "width": 156.875,
+      "height": 148.34375
+    },
+    "a8961163-3a27-4755-8985-540e59fa23fc": {
+      "width": 101.875,
+      "height": 38.34375
+    },
+    "818769ad-e60a-49c7-9c14-f7c538bd403e": {
+      "width": 109.875,
+      "height": 58.34375
+    },
+    "b38ac71a-91ed-4866-9f9d-79ae4691b1b9": {
+      "width": 112.875,
+      "height": 49.54376220703125
+    },
+    "5f5fa2df-1189-4751-a538-4765c65b555e": {
+      "width": 115.875,
+      "height": 56.34375
+    },
+    "6b453554-57da-4af2-99f1-1071d86af08f": {
+      "width": 99.875,
+      "height": 49.64373779296875
+    },
+    "1edb2e1e-d9ec-4d2d-b15b-95ce0324cfc9": {
+      "width": 100.875,
+      "height": 48.443756103515625
+    },
+    "65ecfefb-bdc2-4e65-b0d0-8aa0944d9ed3": {
+      "width": 104.875,
+      "height": 64.34375
+    },
+    "8d61a41b-a7f6-40a7-82de-c1172f07d2aa": {
+      "width": 95.875,
+      "height": 46.84375
+    }
+  },
+  "tool": "pistar.2.1.0",
+  "istar": "2.0",
+  "saveDate": "Mon, 06 Oct 2025 02:47:54 GMT",
+  "diagram": {
+    "width": 1116,
+    "height": 902,
+    "name": "Welcome Model",
+    "customProperties": {
+      "Description": "Welcome to the piStar tool version 2.1.0, released on November, 2021! This model describes some of the recent improvements in the tool. Click on the purple elements for further info.\n\nFor help using this tool, please check the Help menu above"
+    }
+  }
+}

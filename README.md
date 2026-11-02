@@ -21,20 +21,23 @@ Este repositorio reúne los proyectos que he desarrollado durante la carrera.
 | Bases de datos | MySQL, PostgreSQL (Supabase), MongoDB |
 | Calidad de software | TestLink, Mantis Bug Tracker, Postman, pruebas funcionales y de regresión |
 | Redes e infraestructura | TCP/IP, DNS, DHCP, NAT, Cisco Packet Tracer, Windows y Linux |
-| Herramientas y metodologías | Git, GitHub, Scrum, UML |
+| Análisis y modelado | Levantamiento de requisitos, casos de uso, historias de usuario, BPMN, iStar, UML |
+| Herramientas y metodologías | Git, GitHub, Scrum |
 | Idiomas | Español nativo, inglés intermedio |
 
 ## Proyectos
 
 | Proyecto | Descripción | Tecnologías | Asignatura |
 |---|---|---|---|
+| [Sistema de Gestión de Almacén](proyectos/sistema-gestion-almacen/) | Plataforma web full stack para un almacén: inventario y stock, ventas, facturación, gestión de empleados y proveedores, y reportes. | Python, FastAPI, SQLite, MongoDB, Astro, Preact | ICI324 (2025) |
+| [DiabeCare](proyectos/diabecare/) | Aplicación de apoyo para personas con diabetes, desarrollada en varias asignaturas: requisitos y arquitectura, MVP con análisis de alimentos por IA, modelado BPMN e iStar, caso de uso y arquitectura de información. | Flutter, Python, Flask, BPMN, iStar | Fundamentos de Ingeniería de Software, Metodologías de Análisis y de Diseño, Interacción Persona-Computador |
+| [EnergyLife](proyectos/energylife/) | Propuesta de sistema de información (TPS y MIS) para una distribuidora con ventas en terreno: arquitectura, stack en la nube, costos, EDT, carta Gantt y gestión de riesgos. | Flutter, Node.js, PostgreSQL, Microsoft Azure, Docker | Sistemas de Información (2026) |
 | TICKET-U: Microservicio de Pagos | Back end del microservicio de pagos de una plataforma de venta de tickets, con integración de la pasarela Stripe. | Node.js, Express, TypeScript, MongoDB, PostgreSQL | Taller de Integración Tecnológica (en curso) |
 | Aseguramiento de Calidad de una Aplicación Web | Planes y casos de prueba funcionales y de regresión, pruebas de API y gestión del ciclo de vida de defectos. | TestLink, Mantis Bug Tracker, Postman | Prueba de Sistemas |
 | Infraestructura de Red para Laboratorio | Diseño de topología para 38 puntos de red, configuración de servicios DNS, DHCP y NAT, y despliegue de un servidor web en Linux. | Cisco Packet Tracer, Linux, TCP/IP | Laboratorio de Redes / Redes de Computadores II |
-| [Sistema de Gestión de Almacén](proyectos/sistema-gestion-almacen/) | Plataforma web full stack para un almacén: inventario y stock, ventas, facturación, gestión de empleados y proveedores, y reportes. | Python, FastAPI, SQLite, MongoDB, Astro, Preact | ICI324 (2025) |
 
 ## Formación
 
 **Ingeniería Civil Informática**, Universidad de Valparaíso (marzo 2023 – presente)
 
-Cursos relevantes: Taller de Integración Tecnológica, Prueba de Sistemas, Bases de Datos I–III, Redes de Computadores I y II, Programación Web, Sistemas Operativos, Arquitectura de Computadores, Metodologías de Análisis y de Diseño.
+Cursos relevantes: Taller de Integración Tecnológica, Prueba de Sistemas, Bases de Datos I–III, Redes de Computadores I y II, Programación Web, Sistemas Operativos, Arquitectura de Computadores, Metodologías de Análisis y de Diseño, Fundamentos de Ingeniería de Software, Sistemas de Información, Interacción Persona-Computador.

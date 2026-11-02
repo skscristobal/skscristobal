@@ -1,0 +1,315 @@
+{
+  "actors": [
+    {
+      "id": "f26b7163-eef7-4f93-ade4-7a5a68b3ba45",
+      "text": "Administrador",
+      "type": "istar.Role",
+      "x": 642,
+      "y": 499,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": []
+    },
+    {
+      "id": "d0284526-2f95-4611-82db-145ac5ab1f0c",
+      "text": "Doctor",
+      "type": "istar.Agent",
+      "x": 634,
+      "y": 94,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": []
+    },
+    {
+      "id": "6c69fbbb-b135-4777-86e5-1f3a99965af9",
+      "text": "Cuidador/Familiar",
+      "type": "istar.Actor",
+      "x": 85,
+      "y": 513,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": []
+    },
+    {
+      "id": "29ed34dc-5207-4d04-a203-2483abfad147",
+      "text": "Paciente",
+      "type": "istar.Actor",
+      "x": 73,
+      "y": 102,
+      "customProperties": {
+        "Description": ""
+      },
+      "nodes": []
+    }
+  ],
+  "orphans": [],
+  "dependencies": [
+    {
+      "id": "78214d29-5202-4bfb-9ebd-40ac1f48e1cf",
+      "text": "Paciente envía datos al doctor",
+      "type": "istar.Goal",
+      "x": 299,
+      "y": 26,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "29ed34dc-5207-4d04-a203-2483abfad147",
+      "target": "d0284526-2f95-4611-82db-145ac5ab1f0c"
+    },
+    {
+      "id": "927cc950-d992-4a8f-87a7-e28ae2a85def",
+      "text": "Doctor envía su opinión/diagnostico al cuidador",
+      "type": "istar.Goal",
+      "x": 403,
+      "y": 229,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "d0284526-2f95-4611-82db-145ac5ab1f0c",
+      "target": "6c69fbbb-b135-4777-86e5-1f3a99965af9"
+    },
+    {
+      "id": "42a0d9b3-3bd0-426d-ae9e-2a777c60e88a",
+      "text": "Doctor envía su opinión/diagnostico al paciente",
+      "type": "istar.Goal",
+      "x": 344,
+      "y": 99,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "d0284526-2f95-4611-82db-145ac5ab1f0c",
+      "target": "29ed34dc-5207-4d04-a203-2483abfad147"
+    },
+    {
+      "id": "6cb045e8-8da3-433a-9221-2f0a3bdfd7a3",
+      "text": "Facilita la información del doctor al paciente",
+      "type": "istar.Goal",
+      "x": 35,
+      "y": 296,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "6c69fbbb-b135-4777-86e5-1f3a99965af9",
+      "target": "29ed34dc-5207-4d04-a203-2483abfad147"
+    },
+    {
+      "id": "94684496-eaea-4377-991b-2e477ebc7fdf",
+      "text": "Mantiene la app disponible y optimizada",
+      "type": "istar.Goal",
+      "x": 286,
+      "y": 490,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "f26b7163-eef7-4f93-ade4-7a5a68b3ba45",
+      "target": "6c69fbbb-b135-4777-86e5-1f3a99965af9"
+    },
+    {
+      "id": "d740c523-d2a0-4f7d-82b2-ae9a35828f91",
+      "text": "Mantiene la app disponible y optimizada",
+      "type": "istar.Goal",
+      "x": 200,
+      "y": 249,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "f26b7163-eef7-4f93-ade4-7a5a68b3ba45",
+      "target": "29ed34dc-5207-4d04-a203-2483abfad147"
+    },
+    {
+      "id": "c0e2d51b-2a82-4c8a-81e7-b62582e3a5ea",
+      "text": "Mantiene la app disponible y optimizada",
+      "type": "istar.Goal",
+      "x": 609,
+      "y": 263,
+      "customProperties": {
+        "Description": ""
+      },
+      "source": "f26b7163-eef7-4f93-ade4-7a5a68b3ba45",
+      "target": "d0284526-2f95-4611-82db-145ac5ab1f0c"
+    }
+  ],
+  "links": [
+    {
+      "id": "99795b3b-4c96-4414-81df-4a8b4d5d2a6b",
+      "type": "istar.DependencyLink",
+      "source": "c0e2d51b-2a82-4c8a-81e7-b62582e3a5ea",
+      "target": "d0284526-2f95-4611-82db-145ac5ab1f0c"
+    },
+    {
+      "id": "b285bfbb-3efb-4754-8f27-2ccb7a40f7c0",
+      "type": "istar.DependencyLink",
+      "source": "f26b7163-eef7-4f93-ade4-7a5a68b3ba45",
+      "target": "c0e2d51b-2a82-4c8a-81e7-b62582e3a5ea"
+    },
+    {
+      "id": "43858d61-803e-4f29-bf54-2588ab922561",
+      "type": "istar.DependencyLink",
+      "source": "d740c523-d2a0-4f7d-82b2-ae9a35828f91",
+      "target": "29ed34dc-5207-4d04-a203-2483abfad147"
+    },
+    {
+      "id": "7f300631-4816-417f-b97c-6bb8573d8e52",
+      "type": "istar.DependencyLink",
+      "source": "f26b7163-eef7-4f93-ade4-7a5a68b3ba45",
+      "target": "d740c523-d2a0-4f7d-82b2-ae9a35828f91"
+    },
+    {
+      "id": "4dc1473d-55ff-4095-a617-bd4e40ee2591",
+      "type": "istar.DependencyLink",
+      "source": "94684496-eaea-4377-991b-2e477ebc7fdf",
+      "target": "6c69fbbb-b135-4777-86e5-1f3a99965af9"
+    },
+    {
+      "id": "611e3fa8-7792-4375-aa0f-71579cc311eb",
+      "type": "istar.DependencyLink",
+      "source": "f26b7163-eef7-4f93-ade4-7a5a68b3ba45",
+      "target": "94684496-eaea-4377-991b-2e477ebc7fdf"
+    },
+    {
+      "id": "119cb516-49b1-4ed5-af31-82e8b8c20667",
+      "type": "istar.DependencyLink",
+      "source": "6cb045e8-8da3-433a-9221-2f0a3bdfd7a3",
+      "target": "29ed34dc-5207-4d04-a203-2483abfad147"
+    },
+    {
+      "id": "14e7f04c-0b55-488b-9f89-c87059ea7906",
+      "type": "istar.DependencyLink",
+      "source": "6c69fbbb-b135-4777-86e5-1f3a99965af9",
+      "target": "6cb045e8-8da3-433a-9221-2f0a3bdfd7a3"
+    },
+    {
+      "id": "f68c62c3-a785-47f4-9102-f78767950732",
+      "type": "istar.DependencyLink",
+      "source": "42a0d9b3-3bd0-426d-ae9e-2a777c60e88a",
+      "target": "29ed34dc-5207-4d04-a203-2483abfad147"
+    },
+    {
+      "id": "d3ad4ccd-5d77-4d87-a19b-41130d1edbcf",
+      "type": "istar.DependencyLink",
+      "source": "d0284526-2f95-4611-82db-145ac5ab1f0c",
+      "target": "42a0d9b3-3bd0-426d-ae9e-2a777c60e88a"
+    },
+    {
+      "id": "738e4f11-e556-4a2b-bc9b-fa0df1b53c54",
+      "type": "istar.DependencyLink",
+      "source": "927cc950-d992-4a8f-87a7-e28ae2a85def",
+      "target": "6c69fbbb-b135-4777-86e5-1f3a99965af9"
+    },
+    {
+      "id": "9638ccb5-c982-4b0f-8e17-813ab055bc8e",
+      "type": "istar.DependencyLink",
+      "source": "d0284526-2f95-4611-82db-145ac5ab1f0c",
+      "target": "927cc950-d992-4a8f-87a7-e28ae2a85def"
+    },
+    {
+      "id": "7fdb65b6-79a1-4c35-a8b6-8b1d7684c2dc",
+      "type": "istar.DependencyLink",
+      "source": "78214d29-5202-4bfb-9ebd-40ac1f48e1cf",
+      "target": "d0284526-2f95-4611-82db-145ac5ab1f0c"
+    },
+    {
+      "id": "b5c9ccc5-1e3c-43e4-818d-f76a93594de9",
+      "type": "istar.DependencyLink",
+      "source": "29ed34dc-5207-4d04-a203-2483abfad147",
+      "target": "78214d29-5202-4bfb-9ebd-40ac1f48e1cf"
+    }
+  ],
+  "display": {
+    "f26b7163-eef7-4f93-ade4-7a5a68b3ba45": {
+      "collapsed": true
+    },
+    "d0284526-2f95-4611-82db-145ac5ab1f0c": {
+      "collapsed": true
+    },
+    "6c69fbbb-b135-4777-86e5-1f3a99965af9": {
+      "collapsed": true
+    },
+    "78214d29-5202-4bfb-9ebd-40ac1f48e1cf": {
+      "width": 99.46875,
+      "height": 46.84375
+    },
+    "927cc950-d992-4a8f-87a7-e28ae2a85def": {
+      "backgroundColor": "#FAB04B",
+      "width": 105.96875,
+      "height": 62.84375
+    },
+    "42a0d9b3-3bd0-426d-ae9e-2a777c60e88a": {
+      "backgroundColor": "#FAB04B",
+      "width": 113.96875,
+      "height": 56.34375
+    },
+    "6cb045e8-8da3-433a-9221-2f0a3bdfd7a3": {
+      "backgroundColor": "#FAE15A",
+      "width": 115.96875,
+      "height": 57.34375
+    },
+    "94684496-eaea-4377-991b-2e477ebc7fdf": {
+      "backgroundColor": "#B185FA",
+      "width": 103.46875,
+      "height": 54.34375
+    },
+    "d740c523-d2a0-4f7d-82b2-ae9a35828f91": {
+      "backgroundColor": "#B185FA",
+      "width": 111.96875,
+      "height": 55.34375
+    },
+    "c0e2d51b-2a82-4c8a-81e7-b62582e3a5ea": {
+      "backgroundColor": "#B185FA",
+      "width": 100.46875,
+      "height": 52.84375
+    },
+    "7f300631-4816-417f-b97c-6bb8573d8e52": {
+      "vertices": [
+        {
+          "x": 344,
+          "y": 335
+        },
+        {
+          "x": 307,
+          "y": 314
+        }
+      ]
+    },
+    "7fdb65b6-79a1-4c35-a8b6-8b1d7684c2dc": {
+      "vertices": [
+        {
+          "x": 587,
+          "y": 51
+        },
+        {
+          "x": 631,
+          "y": 73
+        }
+      ]
+    },
+    "b5c9ccc5-1e3c-43e4-818d-f76a93594de9": {
+      "vertices": [
+        {
+          "x": 136,
+          "y": 50
+        },
+        {
+          "x": 209,
+          "y": 44
+        }
+      ]
+    },
+    "29ed34dc-5207-4d04-a203-2483abfad147": {
+      "collapsed": true
+    }
+  },
+  "tool": "pistar.2.1.0",
+  "istar": "2.0",
+  "saveDate": "Mon, 06 Oct 2025 15:33:52 GMT",
+  "diagram": {
+    "width": 1042,
+    "height": 700,
+    "customProperties": {
+      "Description": ""
+    }
+  }
+}
